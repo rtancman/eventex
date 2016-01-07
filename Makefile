@@ -14,5 +14,5 @@ aliasmanagepy:
 startprojet:
 	manage runserver
 
-appcore:
+startappcore:
 	manage startapp core
