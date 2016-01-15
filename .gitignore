@@ -1,5 +1,7 @@
 # Eventex
 .wttd/
+.env
+*.sqlite3
 
 # pycharm
 .idea/
