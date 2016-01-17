@@ -2,6 +2,7 @@
 .wttd/
 .env
 *.sqlite3
+staticfiles
 
 # pycharm
 .idea/
