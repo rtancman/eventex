@@ -5,9 +5,13 @@ class HomeTest(TestCase):
         self.response = self.client.get('/')
 
     def test_get(self):
-        """GET / must return status code 200"""
+        """
+        GET / must return status code 200
+        """
         self.assertEquals(200,self.response.status_code)
 
     def test_template(self):
-        """must use index.html"""
+        """
+        must use index.html
+        """
         self.assertTemplateUsed(self.response, "index.html")
