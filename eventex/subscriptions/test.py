@@ -90,7 +90,8 @@ class SubscribePostTest(TestCase):
         self.assertIn('rtancman@gmail.com', email.body)
         self.assertIn('21-99999-9999', email.body)
 
-class SubscribeInvalidPost(TestCase):
+
+class SubscribeInvalidPostTest(TestCase):
     def setUp(self):
         self.resp = self.client.post('/inscricao/', {})
 
@@ -110,3 +111,11 @@ class SubscribeInvalidPost(TestCase):
     def test_form_has_errors(self):
         form = self.resp.context['form']
         self.assertTrue(form.errors)
+
+
+class SubscribeSuccessMessageTest(TestCase):
+    def test_message(self):
+        data = dict(name='Raffael Tancman', cpf='12345678901', email='rtancman@gmail.com', phone='21-99999-9999')
+        response = self.client.post('/inscricao/', data, follow=True)
+        self.assertContains(response, 'Inscrição realizada com sucesso!')
+
