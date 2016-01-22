@@ -35,3 +35,6 @@ djangoapplymigration:
 
 djangodumpdbapp:
     manage dumpdata --indent 4 subscriptions
+
+herokurunmigration:
+    heroku run python manage.py migrate
