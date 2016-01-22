@@ -37,6 +37,9 @@ def new(request):
                   {'form' : SubscriptionForm() })
 
 def detail(request, pk):
+    """
+    Trocar o pk de ser um id para ser um hash
+    """
     try:
         subscription = Subscription.objects.get(pk=pk)
     except Subscription.DoesNotExist:
