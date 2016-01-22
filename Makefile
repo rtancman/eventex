@@ -23,3 +23,15 @@ createenv:
 
 herokuaddsendgrid:
     heroku addons:create sendgrid:starter
+
+testnomigrations:
+    manage test --nomigrations
+
+djangomakemigration:
+    manage makemigrations
+
+djangoapplymigration:
+    manage migration
+
+djangodumpdbapp:
+    manage dumpdata --indent 4 subscriptions
