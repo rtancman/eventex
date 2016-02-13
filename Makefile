@@ -38,3 +38,6 @@ djangodumpdbapp:
 
 herokurunmigration:
     heroku run python manage.py migrate
+
+criarfixturespeaker:
+    manage dumpdata --indent 4 core.Speaker >> keynotes.json
