@@ -41,3 +41,7 @@ herokurunmigration:
 
 criarfixturespeaker:
     manage dumpdata --indent 4 core.Speaker >> keynotes.json
+
+
+migrandodadosdebancousando_abc_to_mti:
+    manage makemigrations --empty -n course_abc_to_mti core
